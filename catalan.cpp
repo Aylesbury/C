@@ -9,7 +9,6 @@
 #include <ctype.h>
 #include <stdint.h>
 */
-
 using namespace std;
 
 int Catalan(int n);
@@ -21,8 +20,13 @@ int main (void){
 
 	printf("Введите число: ");
 	scanf("%d", &input);
-	output = Catalan(input);
-	printf("Ответ: %d\n", output);
+	if (input >= 1){
+		input--;
+		output = Catalan(input);
+		printf("Ответ: %d\n", output);
+	} else {
+		printf("Ошибка последовательности чисел\n");
+	}
 
 	system("pause");
 	return 0;
